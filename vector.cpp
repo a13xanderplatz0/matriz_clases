@@ -57,14 +57,26 @@ int& cMatrixL::operator()(int y, int x) {
 int main() {
     cMatrixL m(4, 3); // Crea una matriz de 4 filas y 3 columnas
 
+    // Establecer y obtener valores
+    std::cout << "Inicializando matriz de 4x3..." << std::endl;
+
     int a = m.get(2, 1); // Obtiene el valor en la posición (2, 1)
+    std::cout << "Valor inicial en (2, 1): " << a << std::endl;
+
     m.set(2, 1, 8); // Establece el valor 8 en la posición (2, 1)
+    std::cout << "Nuevo valor en (2, 1): " << m.get(2, 1) << std::endl;
+
     int b = m.gs(2, 2); // Obtiene el valor en la posición (2, 2) usando gs
+    std::cout << "Valor inicial en (2, 2): " << b << std::endl;
+
     m.gs(2, 2) = 7; // Modifica el valor en la posición (2, 2) directamente usando gs
+    std::cout << "Nuevo valor en (2, 2): " << m.get(2, 2) << std::endl;
 
     /* Este es el vector según mi profesor. Estamos haciendo un vector de 4x3,
        pero ya no de la forma tradicional, sino que todo en una sola línea:
        2, 7, 9, 4, 6, 5, 1, 5, 7, 3, 4, 1 */
+
+    std::cout << "Programa finalizado correctamente." << std::endl;
 
     return 0; // Indica que el programa terminó correctamente
 }

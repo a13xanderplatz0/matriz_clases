@@ -41,7 +41,7 @@ public:
     int& operator()(int y, int x);
 
 private:
-    int** m; // Puntero doble que representa una matriz de 4x3
+    int* vec; // Puntero doble que representa una matriz de 4x3
     int dx, dy; // Dimensiones de la matriz:
                 // dx: número de columnas
                 // dy: número de filas
